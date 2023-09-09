@@ -15,6 +15,8 @@ struct ExpensesView: View {
     ], animation: .snappy) private var allExpenses: [Expense]
     /// Grouped Expenses
     @State private var groupedExpenses: [GroupedExpenses] = [GroupedExpenses]()
+    /// Properties
+    @State private var addExpense: Bool = false
     
     
     var body: some View {
@@ -32,13 +34,23 @@ struct ExpensesView: View {
             }
             /// New Category Add Button
             .toolbar {
-                
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        addExpense.toggle()
+                    } label: {
+                        Image(systemName: "plus.circle.fill")
+                            .font(.title3)
+                    }
+                }
             }
         }
         .onChange(of: allExpenses, initial: true) { oldValue, newValue in
             if groupedExpenses.isEmpty {
                 createGroupedExpenses(newValue)
             }
+        }
+        .sheet(isPresented: $addExpense) {
+            AddExpenseView()
         }
     }
     
