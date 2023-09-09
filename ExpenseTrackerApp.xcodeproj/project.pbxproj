@@ -15,6 +15,7 @@
 		4BF7A63E2AAD05A90068AAF4 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7A63D2AAD05A90068AAF4 /* Category.swift */; };
 		4BF7A6412AAD082E0068AAF4 /* ExpensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7A6402AAD082E0068AAF4 /* ExpensesView.swift */; };
 		4BF7A6432AAD083D0068AAF4 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7A6422AAD083D0068AAF4 /* CategoriesView.swift */; };
+		4BF7A6452AAD0A8F0068AAF4 /* GroupedExpenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF7A6442AAD0A8F0068AAF4 /* GroupedExpenses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		4BF7A63D2AAD05A90068AAF4 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		4BF7A6402AAD082E0068AAF4 /* ExpensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesView.swift; sourceTree = "<group>"; };
 		4BF7A6422AAD083D0068AAF4 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		4BF7A6442AAD0A8F0068AAF4 /* GroupedExpenses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupedExpenses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				4B7898332AAD040D00C8720E /* Expense.swift */,
 				4BF7A63D2AAD05A90068AAF4 /* Category.swift */,
+				4BF7A6442AAD0A8F0068AAF4 /* GroupedExpenses.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				4B7898342AAD040D00C8720E /* Expense.swift in Sources */,
 				4B7898262AAD023C00C8720E /* ContentView.swift in Sources */,
 				4BF7A6432AAD083D0068AAF4 /* CategoriesView.swift in Sources */,
+				4BF7A6452AAD0A8F0068AAF4 /* GroupedExpenses.swift in Sources */,
 				4B7898242AAD023C00C8720E /* ExpenseTrackerAppApp.swift in Sources */,
 				4BF7A6412AAD082E0068AAF4 /* ExpensesView.swift in Sources */,
 				4BF7A63E2AAD05A90068AAF4 /* Category.swift in Sources */,
