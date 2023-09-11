@@ -18,11 +18,17 @@ struct ExpensesView: View {
     /// Properties
     @State private var addExpense: Bool = false
     
-    
     var body: some View {
         NavigationStack {
             List {
-                
+                ForEach(groupedExpenses) { group in
+                    Section(group.groupTitle) {
+                        ForEach(group.expenses) { expense in
+                            /// Card View
+                            ExpensesCardView(expense: expense)
+                        }
+                    }
+                }
             }
             .navigationTitle("Expenses")
             .overlay {
@@ -45,7 +51,7 @@ struct ExpensesView: View {
             }
         }
         .onChange(of: allExpenses, initial: true) { oldValue, newValue in
-            if groupedExpenses.isEmpty {
+            if newValue.count > oldValue.count || groupedExpenses.isEmpty {
                 createGroupedExpenses(newValue)
             }
         }
