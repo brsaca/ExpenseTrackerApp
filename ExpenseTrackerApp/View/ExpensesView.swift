@@ -13,6 +13,7 @@ struct ExpensesView: View {
     @Query(sort:[
         SortDescriptor(\Expense.date, order: .reverse)
     ], animation: .snappy) private var allExpenses: [Expense]
+    @Environment(\.modelContext) private var context
     /// Grouped Expenses
     @State private var groupedExpenses: [GroupedExpenses] = [GroupedExpenses]()
     /// Properties
@@ -21,11 +22,28 @@ struct ExpensesView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(groupedExpenses) { group in
+                ForEach($groupedExpenses) { $group in
                     Section(group.groupTitle) {
                         ForEach(group.expenses) { expense in
                             /// Card View
                             ExpensesCardView(expense: expense)
+                                .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                                    /// Delete Button
+                                    Button {
+                                        /// Deleting Data
+                                        context.delete(expense)
+                                        withAnimation {
+                                            group.expenses.removeAll(where: { $0.id == expense.id })
+                                            /// Removing Group, if no expenses
+                                            if group.expenses.isEmpty {
+                                                groupedExpenses.removeAll(where: { $0.id == group.id })
+                                            }
+                                        }
+                                    } label: {
+                                        Image(systemName: "trash")
+                                    }
+                                    .tint(.red)
+                                }
                         }
                     }
                 }
