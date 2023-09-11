@@ -27,4 +27,11 @@ class Expense {
         self.date = date
         self.category = category
     }
+    
+    /// Currency String
+    var currencyString: String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        return formatter.string(from: amount as NSNumber) ?? ""
+    } 
 }
