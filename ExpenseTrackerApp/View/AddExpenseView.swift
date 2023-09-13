@@ -65,14 +65,24 @@ struct AddExpenseView: View {
                     HStack {
                         Text("Category")
                         Spacer()
-                        Picker("", selection: $category) {
-                            ForEach(allCategories) {
-                                Text($0.categoryName)
-                                    .tag($0)
+                        Menu {
+                            ForEach(allCategories) { category in
+                                Button(category.categoryName) {
+                                    self.category = category
+                                }
+                            }
+                            
+                            /// None Button
+                            Button("None") {
+                                category = nil
+                            }
+                        } label: {
+                            if let categoryName = category?.categoryName {
+                                Text(categoryName)
+                            } else {
+                                Text("None")
                             }
                         }
-                        .pickerStyle(.menu)
-                        .labelsHidden()
                     }
                 }
                 
