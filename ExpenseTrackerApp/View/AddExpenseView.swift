@@ -78,6 +78,7 @@ struct AddExpenseView: View {
                 
             }
             .navigationTitle("Add Expense")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 /// Cancel & Add Button
                 ToolbarItem(placement: .topBarLeading) {

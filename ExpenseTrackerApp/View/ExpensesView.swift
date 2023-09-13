@@ -56,7 +56,7 @@ struct ExpensesView: View {
                     }
                 }
             }
-            /// New Category Add Button
+            /// New Expense Add Button
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
@@ -75,6 +75,7 @@ struct ExpensesView: View {
         }
         .sheet(isPresented: $addExpense) {
             AddExpenseView()
+                .interactiveDismissDisabled()
         }
     }
     
