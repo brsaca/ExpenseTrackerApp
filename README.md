@@ -1,6 +1,6 @@
 # ExpenseTracketApp - iOS with SwiftData 👋
 
-A project to test swiftData based on [Complete Expense Tracker App With SwiftData - CRUD - iOS 17 - Xcode 15]([[https://www.youtube.com/watch?v=r61KA8Gzw0M](https://www.youtube.com/watch?v=Mpenbt2mH-Y&list=WL&index=86)])
+A project to test swiftData based on [Complete Expense Tracker App With SwiftData - CRUD - iOS 17 - Xcode 15](https://www.youtube.com/watch?v=r61KA8Gzw0M)
 <p align="center">
 <a href="#">
 <img src="images/expenses tracker.gif" align="center">
