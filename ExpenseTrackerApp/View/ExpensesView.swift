@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct ExpensesView: View {
+    @Binding var currentTab: String
     /// Grouped Expenses Properties
     @Query(sort:[
         SortDescriptor(\Expense.date, order: .reverse)
@@ -69,7 +70,7 @@ struct ExpensesView: View {
             }
         }
         .onChange(of: allExpenses, initial: true) { oldValue, newValue in
-            if newValue.count > oldValue.count || groupedExpenses.isEmpty {
+            if newValue.count > oldValue.count || groupedExpenses.isEmpty || currentTab ==  "Categories" {
                 createGroupedExpenses(newValue)
             }
         }
@@ -109,5 +110,5 @@ struct ExpensesView: View {
 }
 
 #Preview {
-    ExpensesView()
+    ContentView()
 }
