@@ -3,7 +3,7 @@
 A project to test swiftData based on [Complete Expense Tracker App With SwiftData - CRUD - iOS 17 - Xcode 15]([[https://www.youtube.com/watch?v=r61KA8Gzw0M](https://www.youtube.com/watch?v=Mpenbt2mH-Y&list=WL&index=86)])
 <p align="center">
 <a href="#">
-<!--<img src="images/demo_football.gif" align="center">-->
+<img src="images/expenses tracker.gif" align="center">
 </a> 
 <br><br>
      ExpenseTracketApp
@@ -12,10 +12,10 @@ A project to test swiftData based on [Complete Expense Tracker App With SwiftDat
     <img alt="version" src="https://img.shields.io/badge/Version-v1.0-red.svg" />
   </a>
   <a href="#">
-    <img alt="swiftUI" src="https://img.shields.io/badge/Swift-UI-blue.svg" />
+    <img alt="swiftUI" src="https://img.shields.io/badge/SwiftUI-17-blue.svg" />
   </a>
   <a href="#">
-    <img alt="visionOS" src="https://img.shields.io/badge/status-inProgress-yellow.svg" />
+    <img alt="status" src="https://img.shields.io/badge/status-finish-green.svg" />
   </a>
   <br>
     <br>
@@ -25,8 +25,7 @@ A project to test swiftData based on [Complete Expense Tracker App With SwiftDat
 </p>
 
 ## 📝 Description
-
-## 🤖 API
+Use of SwiftData to save information
 
 ## 👤 Author
 
